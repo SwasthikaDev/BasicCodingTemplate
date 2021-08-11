@@ -45,7 +45,7 @@ void divide(int a[], int l, int r)
 {
 if(l<r)
 {
-   int m = l+(r-1)/2;
+   int m = (l+r-1)/2;
    divide(a, l, m);
    divide(a, m + 1, r);
    merge(a,l,m,r);
