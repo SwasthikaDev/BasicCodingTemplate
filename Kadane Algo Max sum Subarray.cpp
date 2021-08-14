@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 int maxsum(vector<int>& nums) {
         if(nums.size()==0) return 0;
         int sum = nums[0], sumc = nums[0];
