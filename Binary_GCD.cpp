@@ -1,26 +1,18 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <bits/stdc++.h>
 using namespace std;
 
 int gcd(int a, int b) {
     if (!a || !b)
-        return a | b;
-    unsigned shift = __builtin_ctz(a | b);
-    a >>= __builtin_ctz(a);
+        return a | b; //if any one is zero, return the other one
+    unsigned shift = __builtin_ctz(a | b); //min no of zeros in both
+    a >>= __builtin_ctz(a); // make it odd
     do {
-        b >>= __builtin_ctz(b);
-        if (a > b)
-            swap(a, b);
-        b -= a;
+        b >>= __builtin_ctz(b); // removing end zeros making it odd 
+        if (a > b) 
+            swap(a, b);  //making b bigger
+        b -= a; // b -=a , euclidian properties , gcd(a,b) = gcd (b,a-b) for b>a
     } while (b);
-    return a << shift;
+    return a << shift; // multiplying it by shift becoz - gcd(2a,2b) = 2 * gcd(a,b) =>  if a and b are multiples of 2
 }
 
 int main()
