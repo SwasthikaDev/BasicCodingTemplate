@@ -5,5 +5,9 @@ Competitive Coding Code Templates
 
 This github reporsitory consists of basic CP coding templates. I hope this helps u.
 
-Stay tuned And Updated.
+Please refer the explanation from Tushar Roy - Coding Made Simple on youtube :) atb to ur journey in coding
+
+Stay tuned And Updated. 
+
+
 
